@@ -1,0 +1,2 @@
+# small-shop
+fbx
