@@ -1,0 +1,4 @@
+
+Header set Access-Control-Allow-Origin *
+Header set Access-Control-Allow-Headers "X-Requested-With, Content-Type"
+Header set Access-Control-Allow-Methods "PUT, POST, GET, OPTIONS, DELETE"
