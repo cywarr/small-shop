@@ -1,3 +1,5 @@
 var obj = {
-  alert: function(){ alert("script function is called!");}
+  method: function(){ alert("method is called!")},
+  value: 0,
+  string: "third"
 }
