@@ -127,7 +127,7 @@ class Corners {
 class Writing {
   constructor() {
     this.text = "SOFTLAND";
-    this.size = 25;
+    this.size = 20;
   }
   draw() {
     ctx.font = `${u(this.size)}px Goldman`;
