@@ -8,3 +8,11 @@ canvas{
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+#fs{
+  position: absolute;
+  margin: 10px;
+  width: 16px;
+  height: 16px;
+  border: 2px dashed darkgreen;
+}
