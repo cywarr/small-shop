@@ -65,22 +65,23 @@ class Boxes {
 
       let a =
         mu.smoothstep(currDist, 0, 5) -
-        mu.smoothstep(currDist, this.distanceWidth - 20, this.distanceWidth);
+        mu.smoothstep(currDist, this.distanceWidth * 0.25, this.distanceWidth);
       ctx.fillStyle = `hsla(${item.color}, 100%, 25%, ${a})`;
       ctx.strokeStyle = `hsla(${item.color}, 75%, 50%, ${a})`;
       ctx.lineWidth = u(0.1);
+      let s = item.size * ((item.currDist * 0.5) + 0.5);
       ctx.strokeRect(
-        u(item.pos.x - item.size * 0.5),
-        u(item.pos.y - item.size * 0.5),
-        u(item.size),
-        u(item.size)
+        u(item.pos.x - s * 0.5),
+        u(item.pos.y - s * 0.5),
+        u(s),
+        u(s)
       );
       if (item.fill) {
         ctx.fillRect(
-          u(item.pos.x - item.size * 0.5),
-          u(item.pos.y - item.size * 0.5),
-          u(item.size),
-          u(item.size)
+          u(item.pos.x - s * 0.5),
+          u(item.pos.y - s * 0.5),
+          u(s),
+          u(s)
         );
       }
       ctx.stroke();
