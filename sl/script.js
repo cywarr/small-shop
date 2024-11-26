@@ -2,6 +2,14 @@ import { Vector2 as vec2, MathUtils as mu, Clock } from "three";
 
 console.clear();
 
+fs.addEventListener("pointerdown", () => {
+  if(!document.fullscreenElement){
+    document.documentElement.requestFullscreen();
+  }else{
+    document.exitFullscreen();
+  }
+});
+
 // load fonts
 await (async function () {
   async function loadFont(fontface) {
