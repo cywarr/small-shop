@@ -5,8 +5,10 @@ console.clear();
 fs.addEventListener("pointerdown", () => {
   if(!document.fullscreenElement){
     document.documentElement.requestFullscreen();
+    fs.style.borderColor = "lightgreen";
   }else{
     document.exitFullscreen();
+    fs.style.borderColor = "darkgreen";
   }
 });
 
