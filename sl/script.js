@@ -69,7 +69,7 @@ class Boxes {
       ctx.fillStyle = `hsla(${item.color}, 100%, 25%, ${a})`;
       ctx.strokeStyle = `hsla(${item.color}, 75%, 50%, ${a})`;
       ctx.lineWidth = u(0.1);
-      let s = item.size * ((item.currDist * 0.75) + 0.25);
+      let s = item.size * ((item.currDist * 0.5) + 0.5);
       ctx.strokeRect(
         u(item.pos.x - s * 0.5),
         u(item.pos.y - s * 0.5),
