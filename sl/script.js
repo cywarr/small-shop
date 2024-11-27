@@ -1,4 +1,4 @@
-import { Vector2 as vec2, MathUtils as mu, Clock } from "three";
+import { Vector2 as vec2, MathUtils as mu, Clock } from "https://unpkg.com/three@0.170.0/build/three.module.js";
 
 console.clear();
 
