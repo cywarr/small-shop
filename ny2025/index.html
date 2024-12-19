@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>2025 / Snowflake of Shards</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.171.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.171.0/examples/jsm/"
+    }
+  }
+</script>
+<script>
+  let rotations = `
+    // https://forum.gamemaker.io/index.php?threads/solved-3d-rotations-with-a-shader-matrix-or-a-matrix-glsl-es.61064/
+      mat4 rx(float a) {
+        return mat4( 1.0, 0.0, 0.0, 0.0,
+                     0.0,cos(a),sin(a), 0.0,
+                     0.0,-sin(a),cos(a), 0.0,
+                     0.0, 0.0, 0.0, 1.0);
+      }
+
+      mat4 ry(float a){
+        return mat4( cos(a),0.0, -sin(a), 0.0,
+                     0.0, 1.0, 0.0, 0.0,
+                     sin(a), 0.0, cos(a), 0.0,
+                     0.0,0.0,0.0,1.0);
+      }
+               
+      mat4 rz(float a){
+        return mat4( cos(a), sin(a), 0.0, 0.0,
+                     -sin(a), cos(a), 0.0, 0.0,
+                     0.0        , 0.0       ,1.0 ,0.0,
+                     0.0        , 0.0       ,0.0 ,1.0);
+      }
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      
+      mat4 rotationXYZ(vec3 angles){
+        return rz(angles.z) * ry(angles.y) * rx(angles.x);
+      }
+  `;
+</script>
+<iframe id="player" style="border: 0; width: 42px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=1063619525/size=small/bgcol=333333/linkcol=4ec5ec/artwork=none/transparent=true/" seamless><a href="https://celia-garcia-garcia.bandcamp.com/track/dance-of-the-sugar-plum-fairy">Dance of the Sugar Plum Fairy by Celia García-García</a></iframe>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>

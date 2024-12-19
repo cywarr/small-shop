@@ -1,0 +1,13 @@
+body{
+  overflow: hidden;
+  margin: 0;
+}
+
+#player{
+  position: absolute;
+  margin: 10px;
+  opacity: 0.5;
+}
+#player:hover{
+  opacity: 1;
+}
