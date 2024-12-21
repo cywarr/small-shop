@@ -40,7 +40,7 @@ await (async function () {
 
 class Postprocessing extends EffectComposer{
   constructor(){
-    super(renderer, new THREE.WebGLRenderTarget(innerWidth, innerHeight, {samples: 4}));
+    super(renderer, new THREE.WebGLRenderTarget(innerWidth, innerHeight, {samples: 1}));
     
     let renderPass = new RenderPass(scene, camera);
     let effectVignette = new ShaderPass(VignetteShader);
