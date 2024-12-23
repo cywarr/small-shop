@@ -36,7 +36,7 @@ class Boxes {
     this.maxDistance = 50;
     this.minDistance = 10;
     this.distanceWidth = this.maxDistance - this.minDistance;
-    this.items = Array.from({ length: 200 }, () => {
+    this.items = Array.from({ length: 500 }, () => {
       return {
         pos: new vec2(),
         dir: new vec2(),
