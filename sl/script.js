@@ -2,13 +2,13 @@ import { Vector2 as vec2, MathUtils as mu, Clock } from "https://unpkg.com/three
 
 console.clear();
 
-fs.addEventListener("pointerdown", () => {
+window.addEventListener("pointerdown", () => {
   if(!document.fullscreenElement){
     document.documentElement.requestFullscreen();
-    fs.style.borderColor = "lightgreen";
+    //fs.style.borderColor = "lightgreen";
   }else{
     document.exitFullscreen();
-    fs.style.borderColor = "darkgreen";
+    //fs.style.borderColor = "darkgreen";
   }
 });
 
